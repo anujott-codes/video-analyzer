@@ -1,10 +1,124 @@
-.venv
+# =========================
+# macOS
+# =========================
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# =========================
+# Python
+# =========================
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.env
-*.venv
-.env.*
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+
+# Virtual environments
 venv/
+.venv/
+env/
+ENV/
+
+# Pip / Python tooling
+pip-wheel-metadata/
+.python-version
+
+# =========================
+# Testing / Coverage
+# =========================
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# IDEs / Editors
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Streamlit
+# =========================
+.streamlit/secrets.toml
+
+# =========================
+# ML / AI Artifacts
+# =========================
+
+# Whisper / audio temp files
+*.wav
+*.mp3
+*.mp4
+*.m4a
+
+# Generated transcripts
+transcripts/
+outputs/
+exports/
+
+# ChromaDB vector store
+chroma/
+chromadb/
+
+# HuggingFace cache
+.cache/
+huggingface_cache/
+
+# Model checkpoints
+models/
+checkpoints/
+
+# =========================
+# PDFs / Generated Reports
+# =========================
+generated_pdfs/
+*.pdf
+
+# =========================
+# OS Temp Files
+# =========================
+tmp/
+temp/
+
+# =========================
+# SQLite / DB
+# =========================
+*.sqlite3
+*.db
+
+# =========================
+# Misc
+# =========================
+*.bak
+*.swp

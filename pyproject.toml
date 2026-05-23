@@ -1,0 +1,7 @@
+[project]
+name = "videoanalyzer"
+version = "0.1.0"
+description = "AI Meeting Assistant — end-to-end NLP system that transcribes, translates, summarises, and enables conversational Q&A over meeting recordings using RAG."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
