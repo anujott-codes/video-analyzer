@@ -12,7 +12,7 @@ from pydub import AudioSegment
 from configs.audio_processor_config import DOWNLOAD_DIR
 import os
 from typing import List
-from logging.logger import get_logger
+from logger.logger import get_logger
 
 logger = get_logger(__name__)
 
