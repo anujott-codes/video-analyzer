@@ -11,16 +11,17 @@ import yt_dlp
 from pydub import AudioSegment
 from configs.audio_processor_config import DOWNLOAD_DIR
 import os
+from typing import List
 from logging.logger import get_logger
 
 logger = get_logger(__name__)
 
 
 class AudioProcessor:
-    def __init__(self):
+    def __init__(self) -> None:
         os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
-    def download_youtube_audio(self, url):
+    def download_youtube_audio(self, url: str) -> str:
         try:
             logger.info("Downloading audio from YouTube")
 
@@ -47,7 +48,7 @@ class AudioProcessor:
             logger.exception("Failed to download YouTube audio")
             raise e
 
-    def convert_to_wav(self, input_path):
+    def convert_to_wav(self, input_path: str) -> str:
         try:
             logger.info("Converting file to WAV")
 
@@ -65,15 +66,15 @@ class AudioProcessor:
             logger.exception("Failed to convert audio to WAV")
             raise e
     
-    def chunk_audio(self, wav_path, chunk_minutes=10):
+    def chunk_audio(self, wav_path: str, chunk_minutes: int = 10) -> List[str]:
         try:
             logger.info("Chunking audio file")
 
             audio = AudioSegment.from_wav(wav_path)
             chunk_length_ms = chunk_minutes * 60 * 1000
-            chunks = []
+            chunks: List[str] = []
 
-            for i,start in enumerate(range(0, len(audio), chunk_length_ms)):
+            for i, start in enumerate(range(0, len(audio), chunk_length_ms)):
                 chunk = audio[start:start + chunk_length_ms]
                 chunk_filename = f"{os.path.splitext(wav_path)[0]}_chunk_{i+1}.wav"
                 chunk.export(chunk_filename, format='wav')
@@ -87,7 +88,7 @@ class AudioProcessor:
             logger.exception("Failed to chunk audio")
             raise e
     
-    def process(self, source):
+    def process(self, source: str) -> List[str]:
         try:
             if source.startswith("http://") or source.startswith("https://"):
                 logger.info("Processing YouTube URL")
