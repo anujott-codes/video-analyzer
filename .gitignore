@@ -59,6 +59,8 @@ htmlcov/
 # Logs
 # =========================
 *.log
+logs/
+
 
 # =========================
 # Environment Variables
