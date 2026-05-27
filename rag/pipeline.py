@@ -51,6 +51,24 @@ class RAGPipeline:
                 f"Failed to initialize Mistral model '{model_config.model_name}': {e}"
             )
 
+    def reset_vectorstore(self):
+        """Delete the existing collection and re-create a fresh vectorstore + chain."""
+        try:
+            logger.info("Resetting vectorstore — deleting existing collection")
+            self.vector_store.delete_collection()
+
+            # Re-create the VectorStoreManager so the collection exists again
+            self.vector_store = VectorStoreManager(embedding_function=self.embeddings)
+
+            # Rebuild the RAG chain with the new retriever reference
+            self.chain = self._build_rag_chain()
+
+            logger.info("Vectorstore reset complete")
+
+        except Exception as e:
+            logger.exception("Failed to reset vectorstore")
+            raise RuntimeError(f"Vectorstore reset failed: {e}")
+
     def process_transcript(self, transcript: str):
         try:
             chunks = self.chunker.split_transcript(transcript)
