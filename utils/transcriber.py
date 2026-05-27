@@ -28,7 +28,11 @@ class Transcriber:
         
         try:
             logger.info(f"Transcribing chunk: {chunk_path} with translate={translate}")
-            result = self.model.transcribe(chunk_path, task="translate" if translate else "transcribe")
+            result = self.model.transcribe(
+                chunk_path,
+                task="translate" if translate else "transcribe",
+                fp16=False
+            )
             logger.info(f"Transcription completed for chunk: {chunk_path}")
             return result['text']
         
