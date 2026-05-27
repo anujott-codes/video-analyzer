@@ -58,7 +58,6 @@ class Extractor:
 
         try:
             splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-                encoding_name="cl100k_base",
                 chunk_size=chunk_size,
                 chunk_overlap=chunk_overlap
             )

@@ -10,7 +10,6 @@ class TranscriptChunker:
         self.config = config
 
         self.text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-            encoder_name=self.config.encoder_name,
             chunk_size=self.config.chunk_size,
             chunk_overlap=self.config.chunk_overlap
         )
