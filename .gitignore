@@ -124,3 +124,8 @@ temp/
 # =========================
 *.bak
 *.swp
+
+vectorstore/
+vectorstore/db/
+*.sqlite3
+chroma_db/
