@@ -9,7 +9,7 @@ class Embedder:
     def load_embeddings(self):
 
         embeddings = HuggingFaceEmbeddings(
-            model_name=self.config.embedding_model
+            model_name=self.config.model_name
         )
 
         return embeddings
