@@ -122,7 +122,7 @@ class Summarizer:
             logger.info("Starting title generation")
 
             title_prompt = ChatPromptTemplate.from_messages([
-                ("system", "You are a creative assistant that generates concise and catchy titles for video summaries."),
+                ("system", "You are a creative assistant that generates concise and catchy title for video summaries. Give only 1 title without any explanation."),
                 ("human", "Generate a title for the following summary:\n{summary}")
             ])
 
