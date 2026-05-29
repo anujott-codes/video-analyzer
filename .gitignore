@@ -35,6 +35,15 @@ pip-wheel-metadata/
 .python-version
 
 # =========================
+# Node.js / Frontend
+# =========================
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# =========================
 # Testing / Coverage
 # =========================
 .pytest_cache/
@@ -92,6 +101,7 @@ exports/
 # ChromaDB vector store
 chroma/
 chromadb/
+chroma_db/
 
 # HuggingFace cache
 .cache/
@@ -127,5 +137,3 @@ temp/
 
 vectorstore/
 vectorstore/db/
-*.sqlite3
-chroma_db/
