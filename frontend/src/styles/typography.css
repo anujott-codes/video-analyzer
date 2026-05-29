@@ -1,0 +1,108 @@
+/* ═══════════════════════════════════════════════════════════
+   VidMind — Typography
+   Inter (body) + Space Grotesk (headings)
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Font Families ─────────────────────────────────────── */
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ── Font Sizes ────────────────────────────────────────── */
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-lg:    1.125rem;
+  --text-xl:    1.25rem;
+  --text-2xl:   1.5rem;
+  --text-3xl:   clamp(1.8rem, 3vw, 2.25rem);
+  --text-4xl:   clamp(2rem, 4vw, 3rem);
+  --text-5xl:   clamp(2.5rem, 5vw, 4rem);
+  --text-hero:  clamp(3rem, 7vw, 5.5rem);
+}
+
+/* ── Heading Styles ────────────────────────────────────── */
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-hero);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ── Body Text ─────────────────────────────────────────── */
+.text-sm    { font-size: var(--text-sm); }
+.text-base  { font-size: var(--text-base); }
+.text-lg    { font-size: var(--text-lg); }
+.text-xl    { font-size: var(--text-xl); }
+.text-muted { color: var(--gray-400); }
+.text-neon  { color: var(--neon); }
+
+/* ── Special Text Effects ──────────────────────────────── */
+.text-glow {
+  color: var(--neon);
+  text-shadow: var(--glow-text);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--neon-light), var(--neon), var(--neon-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-white {
+  background: linear-gradient(180deg, var(--white) 0%, var(--gray-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Label / Badge ─────────────────────────────────────── */
+.label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--neon);
+  background: var(--neon-alpha-10);
+  border: 1px solid var(--neon-alpha-20);
+  border-radius: var(--radius-full);
+}

@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════════════════
+   VidMind — Design Tokens
+   Pure black theme with neon orange accents
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Core Blacks ───────────────────────────────────────── */
+  --black:          #000000;
+  --black-soft:     #050505;
+  --black-card:     #0a0a0a;
+  --black-elevated: #0d0d0d;
+
+  /* ── Grays ─────────────────────────────────────────────── */
+  --gray-950: #0f0f0f;
+  --gray-900: #111111;
+  --gray-850: #161616;
+  --gray-800: #1a1a1a;
+  --gray-750: #222222;
+  --gray-700: #2a2a2a;
+  --gray-600: #3a3a3a;
+  --gray-500: #555555;
+  --gray-400: #777777;
+  --gray-300: #999999;
+  --gray-200: #bbbbbb;
+
+  /* ── Whites ────────────────────────────────────────────── */
+  --white:      #ffffff;
+  --white-soft: #e8e8e8;
+  --white-muted:#cccccc;
+
+  /* ── Neon Orange System ────────────────────────────────── */
+  --neon:            #ff6a00;
+  --neon-light:      #ff8c33;
+  --neon-lighter:    #ffaa66;
+  --neon-dark:       #cc5500;
+  --neon-darker:     #993f00;
+
+  --neon-rgb:        255, 106, 0;
+  --neon-alpha-05:   rgba(255, 106, 0, 0.05);
+  --neon-alpha-10:   rgba(255, 106, 0, 0.10);
+  --neon-alpha-15:   rgba(255, 106, 0, 0.15);
+  --neon-alpha-20:   rgba(255, 106, 0, 0.20);
+  --neon-alpha-30:   rgba(255, 106, 0, 0.30);
+  --neon-alpha-40:   rgba(255, 106, 0, 0.40);
+  --neon-alpha-60:   rgba(255, 106, 0, 0.60);
+
+  /* ── Glow Shadows ──────────────────────────────────────── */
+  --glow-sm:       0 0 10px rgba(255, 106, 0, 0.25);
+  --glow-md:       0 0 20px rgba(255, 106, 0, 0.3), 0 0 60px rgba(255, 106, 0, 0.1);
+  --glow-lg:       0 0 30px rgba(255, 106, 0, 0.4), 0 0 80px rgba(255, 106, 0, 0.15);
+  --glow-xl:       0 0 40px rgba(255, 106, 0, 0.5), 0 0 100px rgba(255, 106, 0, 0.2), 0 0 160px rgba(255, 106, 0, 0.08);
+  --glow-text:     0 0 20px rgba(255, 106, 0, 0.6), 0 0 40px rgba(255, 106, 0, 0.3);
+
+  /* ── Glassmorphism ─────────────────────────────────────── */
+  --glass-bg:         rgba(255, 255, 255, 0.02);
+  --glass-bg-hover:   rgba(255, 255, 255, 0.04);
+  --glass-bg-solid:   rgba(10, 10, 10, 0.85);
+  --glass-border:     rgba(255, 255, 255, 0.06);
+  --glass-border-hover: rgba(255, 255, 255, 0.10);
+  --glass-blur:       20px;
+  --glass-blur-heavy: 40px;
+
+  /* ── Spacing ───────────────────────────────────────────── */
+  --space-xs:   0.25rem;
+  --space-sm:   0.5rem;
+  --space-md:   1rem;
+  --space-lg:   1.5rem;
+  --space-xl:   2rem;
+  --space-2xl:  3rem;
+  --space-3xl:  4rem;
+  --space-4xl:  6rem;
+  --space-5xl:  8rem;
+
+  /* ── Border Radius ─────────────────────────────────────── */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ───────────────────────────────────────── */
+  --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce:    cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+  --duration-fast:    150ms;
+  --duration-normal:  300ms;
+  --duration-slow:    500ms;
+  --duration-slower:  800ms;
+
+  /* ── Z-Index Scale ─────────────────────────────────────── */
+  --z-canvas:    -1;
+  --z-base:       0;
+  --z-content:    1;
+  --z-overlay:    10;
+  --z-navbar:     100;
+  --z-modal:      1000;
+
+  /* ── Container ─────────────────────────────────────────── */
+  --container-max: 1200px;
+  --container-narrow: 720px;
+  --container-pad: clamp(1rem, 4vw, 3rem);
+
+  /* ── Navbar ────────────────────────────────────────────── */
+  --navbar-height: 72px;
+}
