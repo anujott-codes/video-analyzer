@@ -1,0 +1,133 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+.eggs/
+MANIFEST
+*.ipynb
+.ipynb_checkpoints/
+videoanalyzer.egg-info/
+
+# ── Virtual Environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.env/
+
+# ── Environment & Secrets ─────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# ── Model & HuggingFace Caches ────────────────────────────────────────────────
+.cache/
+.huggingface/
+huggingface_cache/
+hf_cache/
+model_cache/
+cache/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.gguf
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+data/raw/
+data/interim/
+data/processed/
+downloads/
+
+# ── Vector Stores ─────────────────────────────────────────────────────────────
+chroma/
+vectorstore/db/
+
+# ── MLOps & Experiment Tracking ───────────────────────────────────────────────
+mlruns/
+mlartifacts/
+.dvc/
+.dvcignore
+dvc.lock
+runs/
+outputs/
+artifacts/*
+!artifacts/model
+checkpoints/
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+tests/
+test_*
+
+# ── Linting & Formatting ──────────────────────────────────────────────────────
+.ruff_cache/
+.mypy_cache/
+.black_cache/
+
+# ── Logs & Temp ───────────────────────────────────────────────────────────────
+*.log
+logs/
+tmp/
+temp/
+
+# ── Frontend (served separately) ─────────────────────────────────────────────
+frontend/
+
+# ── Docs & Misc ───────────────────────────────────────────────────────────────
+docs/
+*.md
+README*
+LICENSE
+CHANGELOG*
+notebooks/
+
+# ── Git ───────────────────────────────────────────────────────────────────────
+.git/
+.gitignore
+.gitattributes
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# ── IDE & Editors ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+*.sublime-project
+*.sublime-workspace
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
