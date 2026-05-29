@@ -6,7 +6,7 @@
 import { createGlowButton } from '../components/GlowButton.js';
 import { createWaveformVisualizer } from '../components/WaveformVisualizer.js';
 import { transcribe, summarize, extract } from '../api.js';
-import { getState, setState } from '../state.js';
+import { getState, setState, resetAnalysis } from '../state.js';
 import { navigate } from '../router.js';
 
 /**
@@ -297,6 +297,10 @@ export function renderAnalyze() {
 
   // ── Start analysis pipeline ───────────────────────────────
   async function startAnalysis() {
+    // Reset all previous state (clears transcript, summary, chat history, etc.)
+    // The backend will also reset the vectorstore on the /transcribe call.
+    resetAnalysis();
+
     // Validate input
     if (mode === 'youtube') {
       const urlInput = analyzeCard.querySelector('#youtube-url');

@@ -39,20 +39,6 @@ export function renderResults() {
   h2.textContent = state.title || 'Analysis Results';
   header.appendChild(h2);
 
-  const meta = document.createElement('div');
-  meta.className = 'results-meta';
-
-  const srcBadge = document.createElement('span');
-  srcBadge.className = 'badge';
-  srcBadge.textContent = state.sourceType === 'youtube' ? 'YouTube' : 'Upload';
-
-  const chunkBadge = document.createElement('span');
-  chunkBadge.className = 'badge';
-  chunkBadge.textContent = `${state.numChunks} chunks processed`;
-
-  meta.appendChild(srcBadge);
-  meta.appendChild(chunkBadge);
-  header.appendChild(meta);
   resultsPage.appendChild(header);
 
   // ── Tabs ──────────────────────────────────────────────────
@@ -123,8 +109,14 @@ export function renderResults() {
     // Panel body
     if (activeTab === 'summary') {
       const block = document.createElement('div');
-      block.className = 'content-block';
-      block.textContent = state.summary || 'No summary available.';
+      block.className = 'content-block markdown-body';
+      const rawSummary = state.summary || 'No summary available.';
+      // Render as markdown if marked is available, otherwise fall back to plain text
+      if (window.marked) {
+        block.innerHTML = window.marked.parse(rawSummary);
+      } else {
+        block.textContent = rawSummary;
+      }
       card.appendChild(block);
     } else {
       const dataMap = {
