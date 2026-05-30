@@ -3,7 +3,10 @@
    Fetch wrappers for all FastAPI backend endpoints
    ═══════════════════════════════════════════════════════════ */
 
-const BASE = '/api';
+// In development, '/api' is proxied by Vite to localhost:8080.
+// In production (Vercel), set VITE_API_URL to your deployed backend URL
+// e.g. VITE_API_URL=https://your-backend.railway.app
+const BASE = import.meta.env.VITE_API_URL || '/api';
 
 /**
  * POST /transcribe — multipart form (file or youtube_url)
